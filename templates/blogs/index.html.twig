@@ -5,10 +5,10 @@
 {% block body %}
 BLOG
 
-    <h1>{{ pluralize(blogs | length, 'blog') }}</h1>
+    <h1>{{ pluralize(blogs | length, 'blogs') }}</h1>
     {% for blog in blogs %}
     <article>
-        <h2>{{ blog.title }}</h2>
+        <h2><a href="{{ path('app_blogs_show', {id: blog.id}) }}">{{ blog.title }}</a></h2>
         <p>{{ blog.article }}</p>
         <h4>{{ blog.prenom}}</h4> <h4>{{ blog.nom }}</h4>
     </article>
