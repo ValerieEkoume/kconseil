@@ -31,7 +31,7 @@ class Blog
 
     /**
      * @ORM\Column(type="text")
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Tu oublies le plus important !")
      * @Assert\Length(min=10)
      */
     private $article;
@@ -60,7 +60,7 @@ class Blog
         return $this->title;
     }
 
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
 
@@ -72,7 +72,7 @@ class Blog
         return $this->article;
     }
 
-    public function setArticle(string $article): self
+    public function setArticle(?string $article): self
     {
         $this->article = $article;
 
@@ -84,7 +84,7 @@ class Blog
         return $this->prenom;
     }
 
-    public function setPrenom(string $prenom): self
+    public function setPrenom(?string $prenom): self
     {
         $this->prenom = $prenom;
 
@@ -96,7 +96,7 @@ class Blog
         return $this->nom;
     }
 
-    public function setNom(string $nom): self
+    public function setNom(?string $nom): self
     {
         $this->nom = $nom;
 

@@ -9,8 +9,9 @@ BLOG
     {% for blog in blogs %}
     <article>
         <h2><a href="{{ path('app_blogs_show', {id: blog.id}) }}">{{ blog.title }}</a></h2>
-        <p>{{ blog.article }}</p>
-        <h4>{{ blog.prenom}}</h4> <h4>{{ blog.nom }}</h4>
+        <p>{{ blog.article |u.truncate(10, '...', false) }}</p>
+        <h4> Par {{ blog.prenom}}  {{ blog.nom }}</h4>
+        <p>Créer  {{ blog.createdAt | ago}}</p>
     </article>
 
     {% endfor %}
