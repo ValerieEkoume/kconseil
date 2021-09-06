@@ -6,9 +6,5 @@
 
     <h1>Créer un Article</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-    <input type="submit" value="Créer un Articles" formnovalidate>
-    {{ form_end(form) }}
-
+    {{ include('blogs/_form.html.twig') }}
 {% endblock %}
