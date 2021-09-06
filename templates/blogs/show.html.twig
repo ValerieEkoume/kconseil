@@ -10,7 +10,8 @@
     <p>{{ blog.article }}</p>
 
 </article>
+    <a href="{{ path('app_blogs_edit', {id: blog.id}) }}">Modifier l'article</a> |
+    <a href="{{ path('app_blogs') }}">Retour</a>
 
-    <a href="{{ path('app_blog') }}">Retour</a>
 
 {% endblock %}

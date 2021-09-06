@@ -14,6 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
+
     /**
      * @Route("/blogs", name="app_blogs", methods="GET")
      */
@@ -59,4 +60,33 @@ class BlogController extends AbstractController
     {
         return $this->render('blogs/show.html.twig', compact('blog'));
     }
+
+
+    /**
+     * @Route("/blogs/{id<[0-9]+>}/edit", name="app_blogs_edit", methods= {"GET", "POST"})
+     */
+    public function edit(Request $request, EntityManagerInterface $em, Blog $blog):Response
+    {
+        $form=$this->createFormBuilder($blog)
+            ->add('title', TextType::class)
+            ->add('article', TextareaType::class)
+            ->add('prenom', TextType::class)
+            ->add('nom', TextType::class)
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->flush();
+
+            return $this->redirectToRoute('app_blogs');
+        }
+
+            return $this->render('blogs/edit.html.twig', [
+                'blog'=> $blog,
+                'form' => $form->createView()
+
+        ]);
+        }
+
 }

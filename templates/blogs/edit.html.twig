@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Edit article' ~ blog.id %}
+
+{% block body %}
+
+    <h1>Modifier l'article {{ blog.id }}</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Modifier un Article" formnovalidate>
+    {{ form_end(form) }}
+
+{% endblock %}
