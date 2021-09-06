@@ -80,4 +80,16 @@ class BlogController extends AbstractController
         ]);
         }
 
+    /**
+     * @Route("/blogs/{id<[0-9]+>}/delete", name="app_blogs_delete", methods= {"GET"})
+     */
+    public function delete(EntityManagerInterface $em, Blog $blog):Response
+    {
+        $em->remove($blog);
+        $em->flush();
+
+        return $this->redirectToRoute('app_blogs');
+    }
+
+
 }

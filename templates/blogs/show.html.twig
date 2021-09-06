@@ -11,6 +11,7 @@
 
 </article>
     <a href="{{ path('app_blogs_edit', {id: blog.id}) }}">Modifier l'article</a> |
+    <a href="{{ path('app_blogs_delete', {id: blog.id}) }}" onclick="addEventListener(confirm('Press a button!\nEither OK or Cancel.'))">Supprimer l'article</a> |
     <a href="{{ path('app_blogs') }}">Retour</a>
 
 
