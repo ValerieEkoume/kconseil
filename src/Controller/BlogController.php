@@ -3,11 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Blog;
+use App\Form\BlogType;
 use App\Repository\BlogRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,12 +30,8 @@ class BlogController extends AbstractController
     {
         $blog = new Blog;
 
-        $form = $this->createFormBuilder($blog)
-            ->add('title', TextType::class)
-            ->add('article', TextareaType::class)
-            ->add('prenom', TextType::class)
-            ->add('nom', TextType::class)
-            ->getForm()
+        $form = $this->createForm(BlogType::class, $blog)
+
             ;
 
         $form->handleRequest($request);
@@ -67,12 +62,8 @@ class BlogController extends AbstractController
      */
     public function edit(Request $request, EntityManagerInterface $em, Blog $blog):Response
     {
-        $form=$this->createFormBuilder($blog)
-            ->add('title', TextType::class)
-            ->add('article', TextareaType::class)
-            ->add('prenom', TextType::class)
-            ->add('nom', TextType::class)
-            ->getForm();
+        $form = $this->createForm(BlogType::class, $blog)
+          ;
 
         $form->handleRequest($request);
 
