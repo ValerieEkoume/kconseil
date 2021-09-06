@@ -87,7 +87,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/blogs/{id<[0-9]+>}/delete", name="app_blogs_delete", methods= {"GET"})
      */
-    public function delete(EntityManagerInterface $em, Blog $blog):Response
+    public function delete(Request $request, EntityManagerInterface $em, Blog $blog):Response
     {
 
         $em->remove($blog);

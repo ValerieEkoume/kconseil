@@ -10,8 +10,8 @@
     <p>{{ blog.article }}</p>
 
 </article>
-    <a href="{{ path('app_blogs_edit', {id: blog.id}) }}">Modifier l'article</a> |
-    <a href="{{ path('app_blogs_delete', {id: blog.id}) }}">Supprimer article <input type="hidden" name="csrf_token" value="{{ csrf_token('blog_deletion' ~ blog.id)}} }}" style="display: none"></a> |
+    <a href="{{ path('app_blogs_edit', {id: blog.id}) }}">Modifier</a> |
+    <a href="{{ path('app_blogs_delete', {id: blog.id}) }}">Supprimer <input type="hidden" name="csrf_token" value="{{ csrf_token('blog_deletion' ~ blog.id)}} }}" style="display: none"></a> |
     <a href="{{ path('app_blogs') }}">Retour</a>
 
 

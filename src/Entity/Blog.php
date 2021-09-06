@@ -24,25 +24,27 @@ class Blog
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Anaïs n'oubie pas le titre !")
+     * @Assert\Length(min=3)
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank
+     * @Assert\Length(min=10)
      */
     private $article;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Et ton prénom alors ?")
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="N'oublie pas ton nom aussi")
      */
     private $nom;
 
