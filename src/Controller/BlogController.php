@@ -40,6 +40,8 @@ class BlogController extends AbstractController
             $em->persist($blog);
             $em->flush();
 
+            $this->addFlash('success', 'L\'article de blog a bien été créé');
+
             return $this->redirectToRoute('app_blogs');
         }
 
@@ -70,6 +72,8 @@ class BlogController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em->flush();
 
+            $this->addFlash('success', 'Article modifié avec succès');
+
             return $this->redirectToRoute('app_blogs');
         }
 
@@ -85,8 +89,11 @@ class BlogController extends AbstractController
      */
     public function delete(EntityManagerInterface $em, Blog $blog):Response
     {
+
         $em->remove($blog);
         $em->flush();
+
+        $this->addFlash('info', 'Article  supprimé avec succès');
 
         return $this->redirectToRoute('app_blogs');
     }
