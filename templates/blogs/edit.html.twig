@@ -3,9 +3,12 @@
 {% block title 'Edit article' ~ blog.id %}
 
 {% block body %}
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1>Modifier l'article {{ blog.id }}</h1>
+            {{ include('blogs/_form.html.twig', {'submitButtonText': 'Modifier article'}) }}
+        </div>
+    </div>
 
-    <h1>Modifier l'article {{ blog.id }}</h1>
-
-    {{ include('blogs/_form.html.twig', {'submitButtonText': 'Modifier article'}) }}
 
 {% endblock %}
