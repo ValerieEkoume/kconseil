@@ -56,6 +56,7 @@ class Blog
      *
      * @Vich\UploadableField(mapping="blog_image", fileNameProperty="imageName" )
      * @Assert\Image(maxSize="8M")
+     * @Assert\NotNull(message="N'oublie pas la photo")
      *
      * @var File|null
      */

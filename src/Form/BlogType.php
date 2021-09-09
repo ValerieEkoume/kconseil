@@ -21,6 +21,7 @@ class BlogType extends AbstractType
                         'delete_label' => 'Supprimer l\'image',
                         'download_label' => 'Télécharger',
                         'download_uri' => true,
+                        'imagine_pattern' => 'squared_thumbnail_small'
                 ])
             ->add('title')
             ->add('article')
