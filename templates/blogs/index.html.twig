@@ -5,14 +5,34 @@
 {% block body %}
 BLOG
 
-    <h1>{{ pluralize(blogs | length, 'blogs') }}</h1>
-    {% for blog in blogs %}
-    <article>
-        <h2><a href="{{ path('app_blogs_show', {id: blog.id}) }}">{{ blog.title }}</a></h2>
-        <p>{{ blog.article |u.truncate(10, '...', false) }}</p>
-        <h4> Par {{ blog.prenom}}  {{ blog.nom }}</h4>
-        <p>Créer  {{ blog.createdAt | ago}}</p>
-    </article>
 
-    {% endfor %}
+    {% if blogs| length > 0 %}
+        <h1 class="mb-4 text-center text-muted ">{{  pluralize(blogs| length, 'Blog') }}</h1>
+
+        {% for row in blogs|batch(3) %}
+            <div class="row mb-5">
+                {% for blog in row %}
+                    <div class="col-md-4">
+                        <article class="blog bg-white rounded shadow">
+                            <div class="mw-100 overflow-hidden">
+                                <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
+                                    <img src="{{(blog.imageName ? vich_uploader_asset(blog) : asset('build/images/placeholder.jpg')) |
+                                    imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100 rounded-top">
+                                </a>
+                            </div>
+                            <h2 class="h5 pl-3 pt-3">
+                                <a href="{{ path('app_blogs_show', {id: blog.id}) }}"
+                                                         class="text-secondary text-decoration-none">{{ blog.title }}
+                                </a>
+                            </h2>
+                            <p class="pl-3 pb-3 text-muted "><small>Créer  [OWNER FULL NAME]</small></p>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+    {% else %}
+        <p class="h1 mt-5 Text-center">Pas encore d'articles. <a href="{{ path('app_blogs_create') }}">Créez un article</a></p>
+    {% endif %}
 {% endblock %}
