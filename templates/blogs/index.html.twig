@@ -14,10 +14,10 @@ BLOG
                 {% for blog in row %}
                     <div class="col-md-4">
                         <article class="blog bg-white rounded shadow">
-                            <div class="mw-100 overflow-hidden">
+                            <div class="mw-100  rounded-top overflow-hidden">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
                                     <img src="{{(blog.imageName ? vich_uploader_asset(blog) : asset('images/placeholder.jpg')) |
-                                    imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100 rounded-top">
+                                    imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100">
                                 </a>
                             </div>
                             <h2 class="h5 pl-3 pt-3">
