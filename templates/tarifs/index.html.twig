@@ -1,7 +1,37 @@
 {% extends 'layouts/base.html.twig' %}
 
-{% block title 'Mon Expertise' %}
+{% block title 'Tarifs' %}
 
 {% block body %}
 
+
+
+    {% if tarifss| length > 0 %}
+        <h1 class="mb-4 text-center text-muted ">{{  pluralize(tarifss| length, 'tarifs') }}</h1>
+
+        {% for row in tarifss|batch(3) %}
+            <div class="row mb-5">
+                {% for tarifs in row %}
+                    <div class="col-md-4">
+                        <article class="blog bg-white rounded shadow">
+                            <div class="mw-100  rounded-top overflow-hidden">
+                                <a href="{{ path('app_tarifs_show', {id: tarifs.id}) }}">
+
+                                </a>
+                            </div>
+                            <h2 class="h5 pl-3 pt-3">
+                                <a href="{{ path('app_tarifs_show', {id: tarifs.id}) }}"
+                                   class="text-secondary text-decoration-none">{{ tarifs.title }}
+                                </a>
+                            </h2>
+                            <p class="pl-3 pb-3 text-muted "><small></small></p>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+    {% else %}
+        <p class="h1 mt-5 Text-center-justify">Pas encore de tarifs. <a href="{{ path('app_tarifs_new') }}">Créez un tarif</a></p>
+    {% endif %}
 {% endblock %}

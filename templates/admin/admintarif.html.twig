@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html.twig'%}
+
+{% block title 'Gérer les Leçons' %}
+
+{% block body %}
+
+
+<h2>TARIFS</h2>
+<table class="table table-striped mt-4">
+    <thead>
+    <tr>
+        <th>Titre</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for tarifs in tarifss %}
+        <tr>
+            <td>{{ tarifs.title }}</td>
+            <td>
+                <a href="{{ path ('app_tarifs_supprime', {id: tarifs.id}) }}" class="btn btn-secondary">Modifier</a>
+                <form method="post" action="{{ path('app_tarifs_supprime', {id: tarifs.id}) }}"
+                      style="display: inline-block" onsubmit="return confirm('Cette leçon est sur le point ' +
+                       'd\'être supprimée')">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="token" value="{{ csrf_token('delete' ~ tarifs.id) }}">
+                    <button class="btn btn-danger">supprimer</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<div class="text-right">
+    <a href="{{ path('app_tarifs_new') }}" class="btn btn-primary">Créer tarif</a>
+</div>
+
+
+<div class="container">
+    {% for tarifs in tarifss %}
+    {% endfor %}
+</div>
+
+{% endblock %}

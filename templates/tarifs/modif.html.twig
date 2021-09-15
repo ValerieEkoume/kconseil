@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title 'Edit tarif' ~ tarifs.id %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1>Modifier l'article {{ tarifs.id }}</h1>
+            {{ include('tarifs/_form.html.twig', {'submitButtonText': 'Modifier tarif'}) }}
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Blog;
+use App\Entity\Tarifs;
 use App\Form\BlogType;
+use App\Form\TarifsType;
 use App\Repository\BlogRepository;
+use App\Repository\TarifsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -36,7 +39,16 @@ class AdminController extends AbstractController
     public function index(): Response
     {
         $blogs = $this->repository->findAll();
+
         return $this->render('admin/index.html.twig', compact('blogs'));
+    }
+    /**
+     * @Route("/admin-blog", name="app_admin_blog")
+     */
+    public function blog(): Response
+    {
+        $blogs = $this->repository->findAll();
+        return $this->render('admin/adminblog.html.twig', compact('blogs'));
     }
 
     /**
@@ -83,7 +95,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     *  @Route("/admin/couts/delete/{id}", name="app_blogs_delete", methods="DELETE")
+     *  @Route("/admin/blogs/delete/{id}", name="app_blogs_delete", methods="POST")
      * @param Blog $blog
      * @return \Symfony\component\HttpFoundation\Response
      */
@@ -99,6 +111,78 @@ class AdminController extends AbstractController
 
 
     }
+
+    /**
+     * @Route("/admin-tarif", name="app_admin_tarif")
+     */
+    public function tarif(TarifsRepository $tarifsRepository): Response
+    {
+        $tarifss = $tarifsRepository->findAll();
+        return $this->render('admin/admintarif.html.twig', compact('tarifss'));
+    }
+
+    /**
+     * @Route("/tarifs/new", name="app_tarifs_new")
+     */
+    public function new(Request $request)
+    {
+        $tarif = new Tarifs();
+        $form = $this->createForm(TarifsType::class, $tarif);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->persist($tarif);
+            $this->em->flush();
+            $this->addFlash('success', 'Article créée avec succès');
+            return $this->redirectToRoute('app_admin');
+        }
+        return $this->render('tarifs/new.html.twig', [
+            'tarif' => $tarif,
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/tarifs/{id<[0-9]+>}/modif", name="app_tarifs_modif", methods= {"GET", "POST"})
+     * @param Tarifs $tarifs
+     * @return \Symfony\component\HttpFoundation\Response
+     */
+    public function modif(Tarifs $tarifs, Request $request)
+    {
+        $form = $this->createForm(TarifsType::class, $tarifs);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->flush();
+            $this->addFlash('success', 'Leçon modifiée avec succès');
+            return $this->redirectToRoute('app_admin');
+        }
+
+        return $this->render('tarifs/modif.html.twig', [
+            'tarifs' => $tarifs,
+            'form' => $form->createView()
+        ]);
+    }
+
+
+    /**
+     *  @Route("/admin/tarifs/supprime/{id}", name="app_tarifs_supprime", methods="POST")
+     * @param Tarifs $tarifs
+     * @return \Symfony\component\HttpFoundation\Response
+     */
+    public function supprime(Tarifs $tarifs, Request $request)
+    {
+        if ($this->isCsrfTokenValid('delete' . $tarifs->getId(), $request->get('token'))) {
+            $this->em->remove($tarifs);
+            $this->em->flush();
+            $this->addFlash('success', 'Leçon supprimée avec succès');
+
+        }
+        return $this->redirectToRoute('app_admin');
+
+
+    }
+
 
 
 }
