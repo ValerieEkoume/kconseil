@@ -1,9 +1,100 @@
-{% extends 'layouts/base.html.twig' %}
+{% extends 'layouts/base.html.twig'%}
 
-{% block title 'Espace Admin' %}
+{% block title 'Gérer les Leçons' %}
 
 {% block body %}
 
-    <a class="nav-link" href="{{ path('app_blogs_create') }}">Créer un article</a>
+
+    <div class="container mt-4 ">
+        <div class="intro">
+            <h1 class="my-5 py-5 text-center">TABLEAU DE BORD</h1>
+        </div>
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <h2 class="mb-4">ARTICLES</h2>
+        <table class="table table-striped mt-4">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for blog in blogs %}
+                <tr>
+                    <td>{{ blog.title }}</td>
+                    <td>
+                        <a href="{{ path ('app_blogs_edit', {id: blog.id}) }}" class="btn btn-secondary">Modifier</a>
+                        <form method="post" action="{{ path('app_blogs_delete', {id: blog.id}) }}"
+                              style="display: inline-block" onsubmit="return confirm('Cette leçon est sur le point ' +
+                       'd\'être supprimée')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="token" value="{{ csrf_token('delete' ~ blog.id) }}">
+                            <button class="btn btn-danger">supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="mb-4 text-right">
+            <a href="{{ path('app_blogs_create') }}" class="btn btn-primary">Créer une leçon</a>
+        </div>
+    </div>
+
+    <div class="container">
+        {% for blog in blogs %}
+        {% endfor %}
+    </div>
+
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <h2>TARIFS</h2>
+    <table class="table table-striped mt-4">
+        <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for blog in blogs %}
+            <tr>
+                <td>{{ blog.title }}</td>
+                <td>
+                    <a href="{{ path ('app_blogs_edit', {id: blog.id}) }}" class="btn btn-secondary">Modifier</a>
+                    <form method="post" action="{{ path('app_blogs_delete', {id: blog.id}) }}"
+                          style="display: inline-block" onsubmit="return confirm('Cette leçon est sur le point ' +
+                       'd\'être supprimée')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="token" value="{{ csrf_token('delete' ~ blog.id) }}">
+                        <button class="btn btn-danger">supprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-right">
+        <a href="{{ path('app_blogs_create') }}" class="btn btn-primary">Créer tarif</a>
+    </div>
+    </div>
+
+    <div class="container">
+        {% for blog in blogs %}
+        {% endfor %}
+    </div>
 
 {% endblock %}

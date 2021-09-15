@@ -26,15 +26,7 @@
                              par [OWNER FULL NAME]
                          </small>
                      </p>
-                     <div class="">
-                         <a href="{{ path('app_blogs_edit', {id: blog.id}) }}" class="mb-3 btn btn-outline-secondary">Modifier</a>
-                         <a href="{{ path('app_blogs_delete', {id: blog.id}) }}" class="mb-3 btn btn-outline-secondary">Supprimer <input
-                                     type="hidden"
-                                     name="csrf_token"
-                                     value="{{ csrf_token('blog_deletion' ~ blog.id)}} }}"
-                                     style="display: none">
-                         </a>
-                     </div>
+
              </article>
 
          </div>
