@@ -10,6 +10,7 @@ use App\Repository\BlogRepository;
 use App\Repository\TarifsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,17 +34,21 @@ class AdminController extends AbstractController
         $this->em=$em;
     }
 
+
+
     /**
      * @Route("/admin", name="app_admin")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function index(): Response
     {
         $blogs = $this->repository->findAll();
-
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         return $this->render('admin/index.html.twig', compact('blogs'));
     }
     /**
      * @Route("/admin-blog", name="app_admin_blog")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function blog(): Response
     {
@@ -53,6 +58,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/blogs/create", name="app_blogs_create")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function create(Request $request)
     {
@@ -74,6 +80,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/blogs/{id<[0-9]+>}/edit", name="app_blogs_edit", methods= {"GET", "POST"})
+     * @IsGranted("ROLE_ADMIN")
      * @param Blog $blog
      * @return \Symfony\component\HttpFoundation\Response
      */

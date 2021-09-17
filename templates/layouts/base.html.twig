@@ -13,9 +13,15 @@
 
     </head>
     <body>
+
         {{ include('layouts/partials/_flash_messages.html.twig') }}
 
         {{ include('layouts/partials/_nav.html.twig') }}
+        {% if app.user %}
+            <div class="mb-3 text-center">
+                Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
 
         <main role="main" class="container">
             {% block body %}{% endblock %}

@@ -3,14 +3,14 @@
 {% block title 'Blog' %}
 
 {% block body %}
-BLOG
+
 
 
     {% if blogs| length > 0 %}
-        <h1 class="mb-4 text-center text-muted ">{{  pluralize(blogs| length, 'Blog') }}</h1>
+        <h1 class="my-5 text-center text-muted ">{{  pluralize(blogs| length, 'Article') }}</h1>
 
         {% for row in blogs|batch(3) %}
-            <div class="row mb-5">
+            <div class="row mb-5 ">
                 {% for blog in row %}
                     <div class="col-md-4">
                         <article class="blog bg-white rounded shadow">
@@ -33,6 +33,7 @@ BLOG
         {% endfor %}
 
     {% else %}
-        <p class="h1 mt-5 Text-center-justify">Pas encore d'articles. <a href="{{ path('app_blogs_create') }}">Créez un article</a></p>
+{# <p class="h1 mt-5 Text-center-justify">Pas encore d'articles. <a href="{{ path('app_blogs_create') }}">
+    Créez un article</a></p>#}
     {% endif %}
 {% endblock %}

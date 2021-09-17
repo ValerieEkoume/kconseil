@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 @import 'shared/variables';
 @import "~bootstrap";
 body {
+    font-family: 'Abel', sans-serif;
+    background-color: $primary-bg-color;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    min-height: 100vh;
+    width: 100%;
 
-    font-family: $primary-font, sans-serif;
+
 }
-
-
 
 
 
@@ -51,6 +56,101 @@ body {
         transform: scale(1.075);
     }
 }
+
+form .login-form {
+    width: 500px;
+}
+
+.btn-login {
+    background-color: $btn-close-color;
+    color: white;
+}
+
+
+nav {
+    background-color: $primary-blue;
+    font-size: 25px;
+}
+
+nav a {
+    font-size: 25px;
+}
+
+.intro {
+    p{
+        text-align: center;
+        font-size: 30px;
+        color: #1F2B6B;
+        text-transform: capitalize;
+        padding: 5px;
+    }
+    .btn-intro {
+
+    }
+
+    button {
+        position: absolute;
+        left: 47%;
+
+
+    }
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    margin-left: 20px;
+
+    img {
+        width: 100%;
+        padding: 0 30px 0 30px;
+    }
+
+    h4 {
+        text-align: center;
+        padding: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $btn-close-color;
+    }
+}
+
+nav {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+footer {
+
+    padding: 2em;
+    background-color: $primary-blue;
+    color: $btn-close-color;
+    text-align: end;
+    margin-top: auto;
+    font-size: 12px;
+
+
+    h6{
+        font-size: 12px;
+    }
+}
+
+.footer .content-footer {
+    text-align: start;
+}
+
+
+
 
 
 

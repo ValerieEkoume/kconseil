@@ -27,7 +27,7 @@ class SecurityController extends AbstractController
     }
 
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/kimtim", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {

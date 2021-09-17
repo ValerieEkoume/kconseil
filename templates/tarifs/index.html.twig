@@ -1,6 +1,6 @@
 {% extends 'layouts/base.html.twig' %}
 
-{% block title 'Tarifs' %}
+{% block title 'Mon expertise' %}
 
 {% block body %}
 
@@ -32,6 +32,6 @@
         {% endfor %}
 
     {% else %}
-        <p class="h1 mt-5 Text-center-justify">Pas encore de tarifs. <a href="{{ path('app_tarifs_new') }}">Créez un tarif</a></p>
+        {# <p class="h1 mt-5 Text-center-justify">Pas encore de tarifs. <a href="{{ path('app_tarifs_new') }}">Créez un tarif</a></p> #}
     {% endif %}
 {% endblock %}

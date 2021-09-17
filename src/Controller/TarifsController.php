@@ -12,7 +12,7 @@ use App\Repository\TarifsRepository;
 class TarifsController extends AbstractController
 {
     /**
-     * @Route("/tarifs", name="app_tarifs")
+     * @Route("/expertise", name="app_tarifs")
      */
     public function index(TarifsRepository $tarifsRepository): Response
     {

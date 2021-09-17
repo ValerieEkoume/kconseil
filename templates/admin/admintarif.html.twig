@@ -18,7 +18,7 @@
         <tr>
             <td>{{ tarifs.title }}</td>
             <td>
-                <a href="{{ path ('app_tarifs_supprime', {id: tarifs.id}) }}" class="btn btn-secondary">Modifier</a>
+                <a href="{{ path ('app_tarifs_supprime', {id: tarifs.id}) }}" class="btn-login btn btn-secondary">Modifier</a>
                 <form method="post" action="{{ path('app_tarifs_supprime', {id: tarifs.id}) }}"
                       style="display: inline-block" onsubmit="return confirm('Cette leçon est sur le point ' +
                        'd\'être supprimée')">
@@ -33,7 +33,7 @@
 </table>
 
 <div class="text-right">
-    <a href="{{ path('app_tarifs_new') }}" class="btn btn-primary">Créer tarif</a>
+    <a href="{{ path('app_tarifs_new') }}" class="btn-login btn btn-primary">Créer tarif</a>
 </div>
 
 

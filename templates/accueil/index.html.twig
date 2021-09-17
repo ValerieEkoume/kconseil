@@ -3,5 +3,34 @@
 {% block title 'Accueil'%}
 
 {% block body %}
-<h1>Accueil</h1>
+    <section class="accueil">
+        <div class="">
+
+            <div class="intro">
+                <p>
+                    Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
+                    accompagnement dans vos Démarches Administratives.
+                </p>
+                <div class="btn-intro">
+                    <button type="button" class="btn btn-login">Contactez-Nous</button>
+                </div>
+
+            </div>
+            <div class="container-1 ">
+            <div class="box-1">
+                <a href="{{ path('app_tarifs') }}"><img class="picmex" src="{{ asset('build/images/images/modernhouse.jpg') }}" alt=""></a>
+                <a href="{{ path('app_tarifs') }}"><h4 class="">MON EXPERTISE</h4></a>
+            </div>
+                <div class="box-2">
+                <a href="{{ path('app_blogs') }}"><img class="picblog" src="{{ asset('/build/images/images/blognews.jpg') }}" alt=""></a>
+                    <a href="{{ path('app_blogs') }}"><h4 >LE BLOG</h4></a>
+                </div>
+
+        </div>
+        </div>
+
+
+
+    </section>
+
 {% endblock %}
