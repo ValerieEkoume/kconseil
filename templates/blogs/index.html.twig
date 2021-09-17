@@ -4,7 +4,12 @@
 
 {% block body %}
 
+    <div class="jumbotron ">
+        <div class="intro">
+            <h1 class="exp-title-blog">LE BLOG</h1>
 
+        </div>
+    </div>
 
     {% if blogs| length > 0 %}
         <h1 class="my-5 text-center text-muted ">{{  pluralize(blogs| length, 'Article') }}</h1>
