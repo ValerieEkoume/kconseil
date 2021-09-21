@@ -8,35 +8,49 @@
         <div class="">
 
             <div class="intro">
+
                 <p class="mt-5">
                     Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
                     accompagnement dans vos Démarches Administratives.
                 </p>
                 <div class="btn-intro">
-                    <button type="button" class="btn btn-login">Contactez-Nous</button>
+                    <a href="{{ path('app_contact') }}"><button type="button" class="btn btn-login">Contactez-Nous</button></a>
                 </div>
 
             </div>
 
 
             <div class="container-1 ">
-            <div class="box-1">
-                <a href="{{ path('app_tarifs') }}"><img class="picmex" src="{{ asset('build/images/images/modernhouse.jpg') }}" alt=""></a>
-                <a href="{{ path('app_tarifs') }}"><h4 class="">MON EXPERTISE</h4></a>
+            <div class="card" style="width: 30rem">
+                <img class="picmex" src="{{ asset('build/images/images/modernhouse.jpg') }}" alt="">
+                <div class="card-body">
+                    <h4 class="">MON EXPERTISE</h4>
+                    <p>Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
+                        accompagnement dans vos Démarches Administratives <a href="{{ path('app_tarifs') }}">...</a></p>
+
+                </div>
             </div>
-                <div class="box-2">
-                <a href="{{ path('app_blogs') }}"><img class="picblog" src="{{ asset('/build/images/images/blognews.jpg') }}" alt=""></a>
-                    <a href="{{ path('app_blogs') }}"><h4 >LE BLOG</h4></a>
+
+
+                <div class="card" style="width: 30rem">
+                    <img class="picblog" src="{{ asset('/build/images/images/blognews.jpg') }}" alt="">
+                    <div class="card-body">
+                        <h4 class="">RESSOURCES</h4>
+                        <p>Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
+                            accompagnement dans vos Démarches Administratives <a href="{{ path('app_blogs') }}">...</a></p>
+                    </div>
                 </div>
 
         </div>
         </div>
-
-        <p class=" interm mt-5 text-center ">
-            Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
-            accompagnement dans vos Démarches Administratives.
-        </p>
-
+        <div>
+            <blockquote class="blockquote">
+                <p class=" interm mt-5 text-center ">
+                Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
+                accompagnement dans vos Démarches Administratives.
+                </p>
+            </blockquote>
+        </div>
     </section>
 
     <section class="about">

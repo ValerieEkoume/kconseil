@@ -4,6 +4,8 @@
 {% block title blog.title %}
 
 {% block body %}
+
+    <section class="show">
      <div class="row">
          <div class="col-md-6 mx-auto">
                  <article class="blog  rounded ">
@@ -23,7 +25,7 @@
                              <time datetime="{{ blog.createdAt | date('d-m-Y H:i:s')}}">
                                  {{ blog.createdAt|ago}}
                              </time>
-                             par [OWNER FULL NAME]
+                             par {{ blog.prenom }} {{ blog.nom }}
                          </small>
                      </p>
 
@@ -35,5 +37,5 @@
              </div>
      </div>
 
-
+    </section>
 {% endblock %}

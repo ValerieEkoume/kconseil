@@ -70,7 +70,7 @@ class AdminController extends AbstractController
             $this->em->persist($blog);
             $this->em->flush();
             $this->addFlash('success', 'Article créée avec succès');
-            return $this->redirectToRoute('app_admin');
+            return $this->redirectToRoute('app_admin_blog');
         }
         return $this->render('blogs/create.html.twig', [
             'blog' => $blog,
@@ -92,7 +92,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->flush();
             $this->addFlash('success', 'Leçon modifiée avec succès');
-            return $this->redirectToRoute('app_admin');
+            return $this->redirectToRoute('app_admin_blog');
         }
 
         return $this->render('blogs/edit.html.twig', [
@@ -108,13 +108,13 @@ class AdminController extends AbstractController
      */
     public function delete(Blog $blog, Request $request)
     {
-        if ($this->isCsrfTokenValid('delete' . $blog->getId(), $request->get('token'))) {
+        if ($this->isCsrfTokenValid('delete' . $blog->getId(), $request->get('token')))  {
             $this->em->remove($blog);
             $this->em->flush();
             $this->addFlash('success', 'Leçon supprimée avec succès');
 
         }
-        return $this->redirectToRoute('app_admin');
+        return $this->redirectToRoute('app_admin_blog');
 
 
     }
@@ -141,7 +141,7 @@ class AdminController extends AbstractController
             $this->em->persist($tarif);
             $this->em->flush();
             $this->addFlash('success', 'Article créée avec succès');
-            return $this->redirectToRoute('app_admin');
+            return $this->redirectToRoute('app_admin_tarif');
         }
         return $this->render('tarifs/new.html.twig', [
             'tarif' => $tarif,
@@ -162,7 +162,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->flush();
             $this->addFlash('success', 'Leçon modifiée avec succès');
-            return $this->redirectToRoute('app_admin');
+            return $this->redirectToRoute('app_admin_tarif');
         }
 
         return $this->render('tarifs/modif.html.twig', [
@@ -179,13 +179,13 @@ class AdminController extends AbstractController
      */
     public function supprime(Tarifs $tarifs, Request $request)
     {
-        if ($this->isCsrfTokenValid('delete' . $tarifs->getId(), $request->get('token'))) {
+        if ($this->isCsrfTokenValid('supprime' . $tarifs->getId(), $request->get('token'))) {
             $this->em->remove($tarifs);
             $this->em->flush();
             $this->addFlash('success', 'Leçon supprimée avec succès');
 
         }
-        return $this->redirectToRoute('app_admin');
+        return $this->redirectToRoute('app_admin_tarif');
 
 
     }

@@ -3,12 +3,16 @@
 {% block title 'Edit tarif' ~ tarifs.id %}
 
 {% block body %}
+    <section class="admin-blog">
+
+
     <div class="row">
         <div class="col-md-6 mx-auto">
-            <h1>Modifier l'article {{ tarifs.id }}</h1>
+            <h1>Modifier le tarif {{ tarifs.id }}</h1>
             {{ include('tarifs/_form.html.twig', {'submitButtonText': 'Modifier tarif'}) }}
         </div>
     </div>
 
+    </section>
 
 {% endblock %}

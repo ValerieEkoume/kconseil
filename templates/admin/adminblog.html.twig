@@ -4,10 +4,12 @@
 
 {% block body %}
 
+<section class="admin-blog">
 
-    <div class="container mt-4 ">
+
+    <div class="container mt-2 ">
         <div class="intro">
-            <h1 class="my-5 py-5 text-center">TABLEAU DE BORD</h1>
+            <h1 class="my-2 py-2 text-center">TABLEAU DE BORD BLOG</h1>
         </div>
 
         {% for message in app.flashes('success') %}
@@ -16,18 +18,18 @@
             </div>
         {% endfor %}
 
-        <h2 class="mb-4">ARTICLES</h2>
+
         <table class="table table-striped mt-4">
             <thead>
             <tr>
-                <th>Titre</th>
-                <th>Actions</th>
+                <th class="h4 mb-1">Titre</th>
+                <th class="h4 mb-1">Actions</th>
             </tr>
             </thead>
             <tbody>
             {% for blog in blogs %}
                 <tr>
-                    <td>{{ blog.title }}</td>
+                    <td class="h5">{{ blog.title }}</td>
                     <td>
                         <a href="{{ path ('app_blogs_edit', {id: blog.id}) }}" class="btn-login btn btn-secondary">Modifier</a>
                         <form method="post" action="{{ path('app_blogs_delete', {id: blog.id}) }}"
@@ -60,6 +62,6 @@
         </div>
     {% endfor %}
 
-
+</section>
 
 {% endblock %}

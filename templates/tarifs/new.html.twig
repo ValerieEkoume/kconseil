@@ -2,16 +2,19 @@
 
 {% block title 'New Tarif' %}
 
+
+
+
 {% block body %}
-    <div class="row">
-        <div class="col-md-6 mx-auto">
-            <h1>Créer un Tarif</h1>
+    <section class="create-blog">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h1 class="my-4 text-center">Créer un Tarif</h1>
 
-            {{ include('tarifs/_form.html.twig') }}
+                {{ include('tarifs/_form.html.twig') }}
+            </div>
         </div>
-    </div>
 
-
-
+    </section>
 
 {% endblock %}

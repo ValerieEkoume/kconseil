@@ -1,21 +1,23 @@
 
 {% extends 'layouts/base.html.twig' %}
 
-{% block title 'Mon expertise' %}
+{% block title 'Contact' %}
 
 {% block body %}
 
-    <div class="jumbotron ">
+    <section class="contact">
+
+    <div class="jumbotron">
         <div class="intro">
-            <h1 class="exp-title">CONTACT</h1>
+            <h1 class="contact-title">CONTACT</h1>
 
         </div>
     </div>
 
-<section class="mt-5 w-100 h-75">
+<div class=" contact-box mt-5">
 <div>
     <article class="blog bg-white rounded shadow">
-        <div class="mw-100  rounded-top overflow-hidden">
+        <div class="  rounded-top overflow-hidden">
 
         </div>
         <h2 class="h5 pl-3 pt-3 text-center">
@@ -23,13 +25,16 @@
         </h2>
 
         <ul>
-            <li>Adresse mail</li>
-            <li>Numéros de téléphone</li>
+            <li><span>Email: </span>fake@gmail.com</li>
+            <li><span>Tel: </span>+33 (0) 6 33 44 72 21</li>
+            <li><i class="fab fa-facebook-square"></i></li>
 
         </ul>
     </article>
 
 </div>
+
+    </div>
 
     </section>
 {% endblock %}

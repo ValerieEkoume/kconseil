@@ -4,26 +4,27 @@
 
 {% block body %}
 
+<section class="admin-tarifs">
+<h1>TABLEAU DE BORD TARIFS</h1>
 
-<h2>TARIFS</h2>
 <table class="table table-striped mt-4">
     <thead>
     <tr>
-        <th>Titre</th>
-        <th>Actions</th>
+        <th class="h4 mb-1">Titre</th>
+        <th class="h4 mb-1">Actions</th>
     </tr>
     </thead>
     <tbody>
     {% for tarifs in tarifss %}
         <tr>
-            <td>{{ tarifs.title }}</td>
+            <td class="h5">{{ tarifs.title }}</td>
             <td>
-                <a href="{{ path ('app_tarifs_supprime', {id: tarifs.id}) }}" class="btn-login btn btn-secondary">Modifier</a>
+                <a href="{{ path ('app_tarifs_modif', {id: tarifs.id}) }}" class="btn-login btn btn-secondary">Modifier</a>
                 <form method="post" action="{{ path('app_tarifs_supprime', {id: tarifs.id}) }}"
                       style="display: inline-block" onsubmit="return confirm('Cette leçon est sur le point ' +
                        'd\'être supprimée')">
                     <input type="hidden" name="_method" value="DELETE">
-                    <input type="hidden" name="token" value="{{ csrf_token('delete' ~ tarifs.id) }}">
+                    <input type="hidden" name="token" value="{{ csrf_token('supprime' ~ tarifs.id) }}">
                     <button class="btn btn-danger">supprimer</button>
                 </form>
             </td>
@@ -41,5 +42,7 @@
     {% for tarifs in tarifss %}
     {% endfor %}
 </div>
+
+</section>
 
 {% endblock %}
