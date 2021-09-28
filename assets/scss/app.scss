@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
+@import '~@fortawesome/fontawesome-free/css/all.css';
 @import 'shared/variables';
 @import "~bootstrap";
+
 body {
     font-family: 'Abel', sans-serif;
-    background-color: $primary-bg-color;
     padding: 0;
     margin: 0;
     line-height: 1.4;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
 
@@ -69,24 +71,7 @@ form .login-form {
     background-color: $dark-blue;
     color: white;
 
-
 }
-
-
-nav {
-    background-color: $primary-blue;
-    font-size: 25px;
-
-    li {
-        color: #1F2B6B;
-    }
-
-    a {
-        font-size: 25px;
-    }
-}
-
-
 
 .intro {
     margin-bottom: 50px;
@@ -102,7 +87,7 @@ nav {
 
     button {
         position: absolute;
-        left: 43%;
+        left: 45%;
         padding: 0 40px;
         font-size: 20px;
     }
@@ -161,8 +146,6 @@ nav {
         background-color: $primary-blue;
     }
 
-
-
     p {
 
         margin-left: 20%;
@@ -181,7 +164,6 @@ nav {
     background-size: cover;
     color: #fff;
     border-radius: 0 !important;
-
 
 }
 
@@ -204,9 +186,10 @@ nav {
 .contact-title {
     text-align: center;
     position: absolute;
-    top: 34%;
-    left: 42%;
+    top: 36%;
+    left: 43%;
     font-size: 50px;
+    font-weight: bolder;
 
 }
 
@@ -221,7 +204,7 @@ nav {
 
     position: absolute;
     left: 18%;
-    top: 40%;
+    top: 44%;
 
     article {
         height: 40vh;
@@ -229,26 +212,43 @@ nav {
         padding: 30px 0;
         border: 3px solid $primary-blue;
 
-        ul{
-           padding: 30px;
-            margin-top: 10px;
+        h2 {
+            font-weight: bolder;
+            font-size: 30px;
+            color: $dark-blue;
         }
 
-        li {
-            font-size: 20px;
-            list-style: none;
+        p {
+            margin-top: 20px;
             text-align: center;
-            padding: 7px;
+            font-size: 20px;
 
+            span {
+                font-weight: bolder;
+            }
+        }
+        .media{
+            margin-left: 33%;
+
+            li{
+                display: inline-block;
+                font-size: 20px;
+                padding: 20px;
+                justify-content: center;
+                align-items: center;
+
+            }
+            i {
+                font-size: 30px;
+                color: $dark-blue;
+            }
         }
 
     }
 
-
 }
 
 .admin-page {
-    height: 61vh;
 
     .container {
         display: flex;
@@ -259,7 +259,7 @@ nav {
 }
 
 .admin-blog{
-    height: 65vh;
+
 }
 
 .create-blog {
@@ -296,36 +296,110 @@ nav {
 }
 
 
+.blog-show {
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px;
+
+    }
+}
+
+
 
 nav {
+    color: $dark-blue !important;
+    background-color: $primary-blue;
+    font-size: 25px;
 
+    .navbar-brand {
+        font-size: 27px;
+        color: $dark-blue !important;
+        margin-left: 15px;
+    }
     .container {
-        display: flex;
-        justify-content: center;
 
 
     }
 
     .nav {
-        display: flex;
-        justify-content: space-evenly;
+        justify-content: center !important;
+        color: $dark-blue !important;
+        margin-left: 10px;
     }
 
     li {
-        padding: 0 5px;
+        margin: 0 20px;
+    }
+
+    a {
+        font-size: 27px;
+    }
+
+    #logo {
+        width: 73px;
+        position: absolute;
+        left: 1%;
+        top: 0;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
         color: $dark-blue !important;
     }
 }
 
 footer {
 
-    padding: 2em;
+    padding: 1em;
     background-color: $primary-blue;
     color: $dark-blue;
     text-align: end;
     margin-top: auto;
     font-size: 12px;
+.container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
 
+    p{
+        font-size: 20px;
+        font-weight: bolder;
+        color: $dark-blue;
+    }
+
+    small {
+        font-size: 14px;
+        a:link {
+            color: $dark-blue;
+            text-decoration: none;
+        }
+    }
+    .media {
+
+        ul {
+            margin: 0 0 0 40px ;
+            padding: 0 !important;
+        }
+        li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 0 5px;
+            list-style: none;
+
+
+
+        }
+
+        i {
+            font-size: 30px;
+            color: $dark-blue;
+        }
+    }
+    }
 
 
     h6{
@@ -336,6 +410,178 @@ footer {
 .footer .content-footer {
     text-align: start;
 }
+
+/*-------------- MEDIA QUERIES ------------------- */
+
+
+@media screen and (max-width: 768px) {
+
+    .jumbotron {
+        display: none;
+    }
+
+    nav {
+        #logo {
+            display: none;
+        }
+        .navbar-brand {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        a {
+            font-size: 17px;
+        }
+
+    }
+
+    .accueil {
+
+        .container-1 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+    }
+
+    .about {
+        img {
+            display: none;
+        }
+    }
+
+    .contact {
+        .jumbotron {
+            display: none;
+        }
+        .contact-box {
+            position: absolute;
+            left: 12%;
+            top: 15%;
+
+            article {
+                height: 120vh;
+                width: 100vh;
+                padding: 20px 0;
+            }
+
+
+            li {
+                font-size: 15px;
+                list-style: none;
+                text-align: center;
+                padding: 7px;
+
+            }
+
+        }
+
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 991px) {
+
+
+    nav {
+        #logo {
+            display: none;
+        }
+        .navbar-brand {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        a {
+            font-size: 17px;
+        }
+
+    }
+
+    .accueil {
+
+        .container-1 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        button {
+           display: none;
+        }
+    }
+
+    .about {
+        img {
+            display: none;
+        }
+    }
+
+    .contact {
+
+        .jumbotron {
+            height: 30vh;
+        }
+        .contact-box {
+            position: absolute;
+            left: 16%;
+            top: 33%;
+
+            article {
+                height: 35vh;
+                width: 90vh;
+                padding: 30px 0;
+            }
+
+        }
+
+        .contact-title {
+            text-align: center;
+            position: absolute;
+            top: 30%;
+            left: 42%;
+            font-size: 40px;
+
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    nav {
+
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 1440px){
+    #logo {
+        width: 60px;
+        position: absolute;
+        left: 50%;
+        top: 1%;
+    }
+
+}
+
+@media only screen and (min-width: 2000px) {
+
+    #logo {
+        width: 60px;
+        position: absolute;
+        left: 45%;
+        top: 1%;
+    }
+}
+
+
 
 
 
