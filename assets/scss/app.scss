@@ -154,11 +154,16 @@ form .login-form {
         text-align: justify;
         font-size: 17px;
     }
+    .quote {
+        font-size: 5rem;
+    }
 
     img {
         width: 180%;
         padding: 10px 0;
     }
+
+
 }
 
 .jumbotron {
@@ -270,7 +275,7 @@ form .login-form {
 }
 
 .admin-blog{
-
+    height: 70vh;
 }
 
 .create-blog {
