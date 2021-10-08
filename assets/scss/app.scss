@@ -124,6 +124,8 @@ form .login-form {
     padding: 0 20px;
 }
 
+/*--------------  ABOUT ------------------- */
+
 .about-title {
     text-align: center;
     font-size: 60px;
@@ -147,9 +149,10 @@ form .login-form {
     }
 
     p {
-
         margin-left: 20%;
-        padding: 10px;
+        padding: 5px;
+        text-align: justify;
+        font-size: 17px;
     }
 
     img {
@@ -160,12 +163,14 @@ form .login-form {
 
 .jumbotron {
     background: url("../images/modernhouse.jpg");
-    height: 35vh;
+    height: 31vh;
     background-size: cover;
     color: #fff;
     border-radius: 0 !important;
 
 }
+
+/*-------------- EXPERTISE ------------------- */
 
 .exp-title {
     text-align: center;
@@ -183,6 +188,8 @@ form .login-form {
     font-size: 50px;
 }
 
+
+/*-------------- CONTACT ------------------- */
 .contact-title {
     text-align: center;
     position: absolute;
@@ -203,8 +210,8 @@ form .login-form {
 .contact-box {
 
     position: absolute;
-    left: 18%;
-    top: 44%;
+    left: 19%;
+    top: 42%;
 
     article {
         height: 40vh;
@@ -248,9 +255,13 @@ form .login-form {
 
 }
 
+/*-------------- ESPACE ADMIN ------------------- */
+
+
 .admin-page {
 
     .container {
+        height: 75vh;
         display: flex;
         justify-content: space-around;
         padding-top: 100px;
@@ -307,6 +318,7 @@ form .login-form {
     }
 }
 
+/*-------------- NAVIGATION BAR ------------------- */
 
 
 nav {
@@ -336,6 +348,7 @@ nav {
 
     a {
         font-size: 27px;
+        white-space: nowrap;
     }
 
     #logo {
@@ -350,6 +363,9 @@ nav {
         color: $dark-blue !important;
     }
 }
+
+/*-------------- FOOTER ------------------- */
+
 
 footer {
 
@@ -446,6 +462,13 @@ footer {
     }
 
     .about {
+        p {
+
+            margin-left: 10%;
+            padding: 8px;
+            text-align: justify;
+        }
+
         img {
             display: none;
         }
@@ -457,23 +480,38 @@ footer {
         }
         .contact-box {
             position: absolute;
-            left: 12%;
-            top: 15%;
+            left: 0;
+            top: 20%;
 
             article {
-                height: 120vh;
-                width: 100vh;
+                height: 40vh;
+                width: 62vh;
                 padding: 20px 0;
+
+                h2 {
+                    font-weight: bolder;
+                    font-size: 20px;
+                    color: $dark-blue;
+                }
+
+                p {
+                    padding: 5px;
+                    font-size: 17px;
+                }
+
+            .media {
+                li {
+                    font-size: 10px;
+                    list-style: none;
+                    text-align: center;
+                    padding: 10px 10px 0 0;
+
+                }
+            }
+
             }
 
 
-            li {
-                font-size: 15px;
-                list-style: none;
-                text-align: center;
-                padding: 7px;
-
-            }
 
         }
 
@@ -488,16 +526,19 @@ footer {
 
 
     nav {
-        #logo {
-            display: none;
-        }
+
         .navbar-brand {
-            margin: 0;
+
             font-size: 20px;
+            margin-left: 0;
+        }
+
+        li {
+            margin: 0 10px;
         }
 
         a {
-            font-size: 17px;
+            font-size: 22px;
         }
 
     }
@@ -519,32 +560,73 @@ footer {
         img {
             display: none;
         }
+
+        p {
+            margin-left: 3%;
+        }
     }
 
     .contact {
 
         .jumbotron {
-            height: 30vh;
+            height: 28vh;
         }
         .contact-box {
             position: absolute;
-            left: 16%;
-            top: 33%;
+            left: 10%;
+            top: 38%;
 
-            article {
-                height: 35vh;
-                width: 90vh;
-                padding: 30px 0;
+            .contact-title {
+                text-align: center;
+                position: absolute;
+                top: 28%;
+                left: 42%;
+                font-size: 35px;
+
+                article {
+                    height: 60vh;
+                    width: 40vh;
+                    padding: 10px 0;
+
+                    h2 {
+                        font-weight: bolder;
+                        font-size: 20px;
+                        color: $dark-blue;
+                    }
+
+                    p{
+                        font-size: 20px;
+                    }
+
+
+                    li {
+                        font-size: 15px;
+                        list-style: none;
+                        text-align: center;
+                        padding: 7px;
+
+                    }
+                }
             }
+
+            .media{
+
+                li{
+                    display: inline-block;
+                    font-size: 18px;
+                    padding: 15px;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+                i {
+                    font-size: 25px;
+                    color: $dark-blue;
+                }
 
         }
 
-        .contact-title {
-            text-align: center;
-            position: absolute;
-            top: 30%;
-            left: 42%;
-            font-size: 40px;
+
 
         }
     }
