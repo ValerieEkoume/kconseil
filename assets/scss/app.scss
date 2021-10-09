@@ -52,6 +52,14 @@ body {
 
 }
 
+.blog-show {
+
+       .art-show {
+           text-align: justify;
+
+    }
+}
+
 .blog img{
     transition: transform 0.3s ease-out;
     &:hover{
@@ -168,7 +176,7 @@ form .login-form {
 
 .jumbotron {
     background: url("../images/modernhouse.jpg");
-    height: 31vh;
+    height: 30vh;
     background-size: cover;
     color: #fff;
     border-radius: 0 !important;
@@ -176,6 +184,14 @@ form .login-form {
 }
 
 /*-------------- EXPERTISE ------------------- */
+
+.show {
+    height: 100%;
+
+    p{
+        text-align: justify;
+    }
+}
 
 .exp-title {
     text-align: center;

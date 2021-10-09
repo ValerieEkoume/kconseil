@@ -5,8 +5,8 @@
 
 {% block body %}
 
-    <section class="blog-show">
-     <div class="row">
+    <section class="blog-show h-auto">
+     <div class="row mt-5">
          <div class="col-md-6 mx-auto">
                  <article class="blog  rounded ">
                      <div class="mw-100 rounded-top overflow-hidden">
@@ -15,12 +15,12 @@
                              imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100 ">
                          </a>
                      </div>
-                     <h1 class="h5 pl-3 pt-3">
+                     <h1 class="h3 pl-3 pt-3">
                          <a href="{{ path('app_blogs_show', {id: blog.id}) }}"
                             class="text-secondary text-decoration-none">{{ blog.title }}
                          </a>
                      </h1>
-                     <p class="pl-3 pb-1 text-muted "><small>
+                     <p class=" text-muted text-center"><small>
                              Créer
                              <time datetime="{{ blog.createdAt | date('d-m-Y H:i:s')}}">
                                  {{ blog.createdAt|ago}}
@@ -33,7 +33,7 @@
 
          </div>
              <div class="mt-3">
-                <p class="pl-3 pb-3">{{ blog.article }}</p>
+                <p class="art-show px-4 pb-3 h4">{{ blog.article }}</p>
              </div>
      </div>
 
