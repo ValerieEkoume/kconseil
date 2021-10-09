@@ -52,6 +52,10 @@ body {
 
 }
 
+.exp-title-blog {
+
+}
+
 .blog-show {
 
        .art-show {
@@ -194,20 +198,33 @@ form .login-form {
     }
 }
 
+.expertise {
+    h3 {
+        color: $dark-blue;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+}
+
 .exp-title {
     text-align: center;
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 37%;
     font-size: 50px;
+    font-weight: bolder;
 }
+
+
 
 .exp-title-blog {
     text-align: center;
     position: absolute;
-    top: 30%;
-    left: 42%;
+    top: 28%;
+    left: 44%;
     font-size: 50px;
+    font-weight: bolder;
 }
 
 

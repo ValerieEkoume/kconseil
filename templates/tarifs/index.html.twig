@@ -12,15 +12,15 @@
 
     </div>
 
-    <p class="mt-5 text-center h2">
-        Une réponse individualisée au juste prix
-    </p>
+
 
     {% if tarifss| length > 0 %}
-        <h1 class="mb-4 text-center text-muted mt-5">{{  pluralize(tarifss| length, 'Prestation') }}</h1>
+        <h1 class="mb-3 text-center text-muted mt-5">{{  pluralize(tarifss| length, 'Prestation') }}</h1>
+
+
 
         {% for row in tarifss|batch(1) %}
-            <div class="row mb-5">
+            <div class="row my-5">
                 {% for tarifs in row %}
                     <div class="col-md-12">
                         <article class="blog ">
@@ -29,13 +29,13 @@
 
                                 </a>
                             </div>
-                            <h2 class="h5 pl-3 pt-3">
+                            <h2 class="h4 pl-3 pt-3">
                                 <a href="{{ path('app_tarifs_show', {id: tarifs.id}) }}"
                                    class="text-secondary text-decoration-none">{{ tarifs.title }} |
                                     <span class="fw-bolder">{{ tarifs.tarif }}</span>€
                                 </a>
                             </h2>
-                            <p class="pl-3 pb-3 text-muted "><small>{{ tarifs.description}}</small>
+                            <p class="pl-3 pb-3 text-muted h5"><small>{{ tarifs.description}}</small>
 
                             </p>
                         </article>
