@@ -23,6 +23,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4",
         "file-loader": "^6.2.0",
-        "jquerry": "^0.0.1-security"
+        "jquerry": "^0.0.1-security",
+        "leaflet": "^1.7.1"
     }
 }

@@ -96,7 +96,7 @@ form .login-form {
         position: absolute;
         left: 43%;
         padding: 10px 40px;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bolder;
     }
 }
@@ -121,16 +121,40 @@ form .login-form {
     a {
         text-decoration: none;
         color: $dark-blue;
+        font-weight: bolder;
+        margin: 5px;
     }
-    :hover a{
-        color: $primary-blue;
+    a:hover{
+        color: $primary-bg-color;
     }
 }
 
 .interm {
-    font-size: 30px;
+    font-size: 32px;
     padding: 0 20px;
 }
+/*--------------  QUOTES ------------------- */
+
+blockquote {
+    img{
+
+        width: 15%;
+    }
+
+    p{
+        color: $dark-blue;
+        font-size: 30px;
+    }
+
+    .img-end {
+        position: absolute;
+        left: 75%;
+        top: 160%;
+
+    }
+
+}
+
 
 /*--------------  ABOUT ------------------- */
 
@@ -141,7 +165,7 @@ form .login-form {
 }
 
 .about {
-    margin-top: 7%;
+    margin-top: 15%;
     width: 94%;
     height: 100%;
     margin-left: 40px;
@@ -223,6 +247,17 @@ form .login-form {
 }
 
 
+
+/*-------------- BLOG ------------------- */
+.sec-blog {
+    height: 120vh;
+}
+
+
+
+
+/*-------------- FIN BLOG ------------------- */
+
 /*-------------- CONTACT ------------------- */
 .contact-title {
     text-align: center;
@@ -235,7 +270,7 @@ form .login-form {
 }
 
 .contact {
-    height: 75vh;
+    height: 150vh;
 
     .jumbotron {
         height: 50vh;
@@ -244,7 +279,7 @@ form .login-form {
 .contact-box {
 
     position: absolute;
-    left: 19%;
+    left: 17%;
     top: 42%;
 
     article {
@@ -289,13 +324,19 @@ form .login-form {
 
 }
 
+#map {
+
+    height: 10px;
+
+}
+
 /*-------------- ESPACE ADMIN ------------------- */
 
 
 .admin-page {
 
     .container {
-        height: 75vh;
+        height: 120vh;
         display: flex;
         justify-content: space-around;
         padding-top: 100px;
@@ -421,6 +462,11 @@ footer {
         color: $dark-blue;
     }
 
+    a {
+        text-decoration: none;
+        color: $dark-blue;
+    }
+
     small {
         font-size: 14px;
         a:link {
@@ -461,6 +507,21 @@ footer {
     text-align: start;
 }
 
+/*-------------- MENTIONS LEGALES ------------------- */
+
+.confi {
+
+  h2 {
+      margin-bottom: 25px;
+  }
+
+    a{
+        color: $primary-bg-color;
+        text-decoration: none;
+
+    }
+}
+
 /*-------------- MEDIA QUERIES ------------------- */
 
 
@@ -491,6 +552,10 @@ footer {
             display: flex;
             flex-wrap: wrap;
             margin-top: 40px;
+        }
+
+        .quote {
+            display: none;
         }
 
     }

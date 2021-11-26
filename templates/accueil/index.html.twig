@@ -9,7 +9,7 @@
 
             <div class="intro pb-3">
 
-                <p class="mt-5 px-4">
+                <p class="mt-5 px-4 fw-bolder">
                     Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
                     accompagnement dans vos Démarches Administratives.
                 </p>
@@ -21,22 +21,23 @@
 
 
             <div class="container-1 ">
-            <div class="card" style="width: 30rem">
-                <img class="picmex" src="{{ asset('build/images/images/modernhouse.jpg') }}" alt="">
+            <div class="card rounded shadow" style="width: 30rem">
+                <img class="picmex" src="{{ asset('/build/images/images/katcons3.jpg') }}" alt="">
                 <div class="card-body">
                     <h4 class=""><a href="{{ path('app_tarifs') }}">MON EXPERTISE</a></h4>
-                    <p class="h5">Kat Conseil Vous propose Une réponse individualisée au juste prix <a href="{{ path('app_tarifs') }}">...</a></p>
+                    <p class="h5">Kat Conseil Vous propose Une réponse individualisée au juste prix. <br><a href="{{ path('app_tarifs') }}">Consulter </a></p>
 
                 </div>
             </div>
 
 
-                <div class="card" style="width: 30rem">
-                    <img class="picblog" src="{{ asset('/build/images/images/blognews.jpg') }}" alt="">
+                <div class="card rounded shadow" style="width: 30rem">
+                    <img class="picblog" src="{{ asset('/build/images/images/katcon1.JPG') }}" alt="">
                     <div class="card-body">
                         <h4 class=""><a href="{{ path('app_blogs') }}">RESSOURCES</a></h4>
-                        <p> Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
-                            accompagnement dans vos Démarches Administratives <a href="{{ path('app_blogs') }}">...</a></p>
+                        <p class="h5"> Dans cette rubrique, retrouver nos conseils et recommendations en matière de....
+                            <br>
+                            <a href="{{ path('app_blogs') }}">Consulter</a></p>
                     </div>
                 </div>
 
@@ -44,11 +45,14 @@
         </div>
         <div>
 
-            <blockquote class="blockquote px-3">
-                <p class=" interm mt-5 text-center ">
-                    "Accompagner quelqu'un, c'est se placer ni devant ni derrière, ni à sa place. C'est être à côté."
-                    <span>Joseph Templier</span>
+            <blockquote class="blockquote">
+                <img class="mt-4 quote" src="{{ asset('/build/images/images/quotes.png') }}" alt="">
+                <p class=" interm mt-1 text-center fw-bolder fst-italic">
+                    Accompagner quelqu'un, c'est se placer ni devant ni derrière, ni à sa place. C'est être à côté.
+                    <br>
+                    <span class="text-end">Joseph Templier</span>
                 </p>
+                <img class="mt-4 img-end quote" src="{{ asset('/build/images/images/quotes.png') }}" alt="">
             </blockquote>
         </div>
     </section>
