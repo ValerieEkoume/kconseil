@@ -218,6 +218,7 @@ blockquote {
 }
 
 .expertise {
+    height: 120vh;
     h3 {
         color: $dark-blue;
         text-transform: capitalize;
@@ -270,7 +271,7 @@ blockquote {
 }
 
 .contact {
-    height: 150vh;
+    height: 60vh;
 
     .jumbotron {
         height: 50vh;
