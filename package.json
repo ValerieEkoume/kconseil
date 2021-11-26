@@ -20,6 +20,10 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     },
+    "engines": {
+        "node": "v14.15.*",
+        "npm": "8.1.*"
+    },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4",
         "file-loader": "^6.2.0",
