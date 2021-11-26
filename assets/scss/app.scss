@@ -200,7 +200,7 @@ blockquote {
 }
 
 .jumbotron {
-    background: url("../images/modernhouse.jpg");
+    background: url("../images/katcon1.jpg");
     height: 30vh;
     background-size: cover;
     color: #fff;
@@ -554,11 +554,15 @@ footer {
             display: flex;
             flex-wrap: wrap;
             margin-top: 40px;
+
         }
 
-        .quote {
-            display: none;
+        blockquote .img-end {
+                display: none;
+
         }
+
+
 
     }
 
@@ -657,6 +661,26 @@ footer {
         }
     }
 
+    blockquote .img-end {
+        display: none;
+
+    }
+
+    .expertise {
+        .jumbotron {
+            height: 28vh;
+        }
+    }
+
+    .sec-blog {
+
+        .jumbotron {
+            height: 28vh;
+        }
+    }
+
+
+
     .about {
         img {
             display: none;
@@ -670,7 +694,7 @@ footer {
     .contact {
 
         .jumbotron {
-            height: 28vh;
+            height: 15vh;
         }
         .contact-box {
             position: absolute;
@@ -733,14 +757,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 1024px) {
 
-    nav {
-
-
-    }
-
-}
 
 
 
