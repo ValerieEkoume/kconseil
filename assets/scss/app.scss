@@ -3,12 +3,17 @@
 @import 'shared/variables';
 @import "~bootstrap";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Abel', sans-serif;
-    padding: 0;
-    margin: 0;
+    position: relative;
+    padding-bottom: 58px;
     min-height: 100vh;
-    width: 100%;
 
 }
 
@@ -136,6 +141,8 @@ form .login-form {
 /*--------------  QUOTES ------------------- */
 
 blockquote {
+
+    margin-bottom: 10%;
     img{
 
         width: 15%;
@@ -146,12 +153,7 @@ blockquote {
         font-size: 30px;
     }
 
-    .img-end {
-        position: absolute;
-        left: 75%;
-        top: 160%;
 
-    }
 
 }
 
@@ -165,7 +167,7 @@ blockquote {
 }
 
 .about {
-    margin-top: 15%;
+    margin-top: 30px;
     width: 94%;
     height: 100%;
     margin-left: 40px;
@@ -240,7 +242,7 @@ blockquote {
 .exp-title {
     text-align: center;
     position: absolute;
-    top: 29%;
+    top: 15%;
     left: 47%;
     font-size: 45px;
     font-weight: bolder;
@@ -252,7 +254,7 @@ blockquote {
 .exp-title-blog {
     text-align: center;
     position: absolute;
-    top: 30%;
+    top: 19%;
     left: 48%;
     font-size: 50px;
     font-weight: bolder;
@@ -274,7 +276,7 @@ blockquote {
 .contact-title {
     text-align: center;
     position: absolute;
-    top: 31%;
+    top: 25%;
     left: 47%;
     font-size: 50px;
     font-weight: bolder;
@@ -460,12 +462,15 @@ nav {
 
 
 footer {
-
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 1em;
     background-color: $primary-blue;
     color: $dark-blue;
     text-align: end;
-    margin-top: auto;
+    margin-top: 30px;
     font-size: 12px;
 
 .container {
