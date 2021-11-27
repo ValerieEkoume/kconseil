@@ -353,34 +353,15 @@ blockquote {
 .admin-page {
 
     .container {
-        height: 120vh;
         display: flex;
         justify-content: space-around;
         padding-top: 100px;
     }
-
-
-
 }
 
-.admin-blog{
-    height: 70vh;
-}
-
-.create-blog {
-    height: 85vh;
-}
-
-.edit-article {
-    height: 65vh;
-}
-
-.edit-blog {
-    height: 120vh;
-}
 
 .admin-tarifs {
-    height: 65vh;
+
 
     h1{
         text-align: center;
@@ -390,7 +371,7 @@ blockquote {
 }
 
 .show {
-    height: 68vh;
+
 
     h1 {
         text-align: center;
@@ -402,7 +383,7 @@ blockquote {
 
 
 .blog-show {
-    height: 100vh;
+
 
     h1 {
         text-align: center;
@@ -510,8 +491,6 @@ footer {
             padding: 0 5px;
             list-style: none;
 
-
-
         }
 
         i {
@@ -589,7 +568,6 @@ footer {
             }
 
         }
-
 
     }
 
