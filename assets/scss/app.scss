@@ -545,7 +545,7 @@ footer {
         }
 
         a {
-            /*font-size: 17px;*/
+            font-size: 36px;
         }
 
     }
@@ -628,18 +628,7 @@ footer {
 
             .media {
 
-                margin-left: 14%;
-
-                li {
-                    font-size: 18px;
-
-
-                }
-
-                i {
-                    font-size: 25px;
-                    color: $dark-blue;
-                }
+               display: none;
 
             }
         }
@@ -725,10 +714,7 @@ footer {
                 width: 20vh;
             }
 
-            .contact-box {
-                position: absolute;
-                left: 10%;
-                top: 38%;
+
 
                 .contact-title {
                     text-align: center;
@@ -738,11 +724,8 @@ footer {
                     font-size: 35px;
 
                 }
+/*
 
-                article {
-                    height: 60vh;
-                    width: 80vh;
-                    padding: 10px 0;
 
                     h2 {
                         font-weight: bolder;
@@ -762,9 +745,13 @@ footer {
                         padding: 7px;
 
                     }
-                }
+                */
 
                 .media {
+                    ul {
+                        margin-left: 20px;
+                        padding-bottom: 20px;
+                    }
 
                     li {
                         display: inline-block;
@@ -783,7 +770,7 @@ footer {
                 }
 
 
-            }
+
         }
 
         footer {
