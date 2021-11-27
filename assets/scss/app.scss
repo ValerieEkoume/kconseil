@@ -422,7 +422,7 @@ nav {
     }
 
     a {
-        font-size: 27px;
+        /*font-size: 27px;*/
         white-space: nowrap;
     }
 
@@ -534,21 +534,21 @@ footer {
         display: none;
     }
 
-    nav {
+   nav {
         #logo {
             display: none;
         }
 
-        .navbar-brand {
-            margin: 0;
-            font-size: 20px;
-        }
+               .navbar-brand {
+                   margin: 0;
+                   font-size: 20px;
+               }
+       /*
+                      a {
+                          font-size: 36px;
+                      }*/
 
-        a {
-            font-size: 36px;
-        }
-
-    }
+           }
 
     .accueil {
 
@@ -646,7 +646,7 @@ footer {
     @media screen and (max-width: 991px) {
 
 
-        nav {
+       /* nav {
 
             .navbar-brand {
 
@@ -662,7 +662,7 @@ footer {
                 font-size: 18px;
             }
 
-        }
+        }*/
 
         .accueil {
 
