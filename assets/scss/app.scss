@@ -646,23 +646,18 @@ footer {
     @media screen and (max-width: 991px) {
 
 
-       /* nav {
+        nav {
+            #logo {
+                display: none;
+            }
 
             .navbar-brand {
-
+                margin: 0;
                 font-size: 20px;
-                margin-left: 0;
             }
 
-            li {
-                margin: 0 10px;
-            }
 
-            a {
-                font-size: 18px;
-            }
-
-        }*/
+        }
 
         .accueil {
 
