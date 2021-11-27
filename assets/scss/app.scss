@@ -177,8 +177,8 @@ blockquote {
     .container{
         display: flex;
         justify-content: space-between;
-       /* margin-top: 90px;*/
-        /*margin-left: 15px;*/
+        margin-top: 90px;
+        margin-left: 15px;
         background-color: $primary-blue;
     }
 
@@ -256,7 +256,7 @@ blockquote {
     position: absolute;
     top: 19%;
     left: 48%;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bolder;
 }
 
@@ -276,24 +276,22 @@ blockquote {
 .contact-title {
     text-align: center;
     position: absolute;
-    top: 25%;
-    left: 47%;
-    font-size: 50px;
+    top: 27%;
+    left: 45%;
+    font-size: 60px;
     font-weight: bolder;
 
 }
 
 .contact {
-    height: 90vh;
-
     article {
         height: 40vh;
-
         padding: 30px 0;
         border: 3px solid $primary-blue;
+        margin-bottom: 50px;
 
         .media{
-            margin-left: 33%;
+            margin-left: 40%;
 
             li{
                 display: inline-block;
@@ -447,10 +445,10 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1em;
+    /*padding: 1em;*/
     background-color: $primary-blue;
     color: $dark-blue;
-    text-align: end;
+    /*text-align: end;*/
     margin-top: 30px;
     font-size: 12px;
 
@@ -459,6 +457,17 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
+
+    .credits {
+        li {
+            list-style: none;
+            a {
+                font-size: 15px;
+                font-weight: bolder;
+            }
+
+    }
+    }
 
     p{
         font-size: 20px;
@@ -482,7 +491,7 @@ footer {
     .media {
 
         ul {
-            margin: 0 0 0 40px ;
+            /*margin: 0 0 0 40px ;*/
             padding: 0 !important;
         }
         li {
@@ -592,7 +601,7 @@ footer {
         margin-left: 10px;
         p {
 
-            margin-left: 10%;
+            margin-left: 0;
             padding: 8px;
             text-align: justify;
         }
@@ -649,12 +658,23 @@ footer {
         }
 
         footer{
-            .text-muted {
-                font-size: 10px;
+
+            .container {
+                .credits {
+                    li a{
+
+                        font-size: 13px;
+                    }
+                }
+
+                .text-muted {
+                    font-size: 10px;
+                }
+                .footer .content-footer {
+                    text-align: start;
+                }
             }
-            .footer .content-footer {
-                text-align: start;
-            }
+
         }
 
 
@@ -662,7 +682,7 @@ footer {
     }
 
 
-    @media screen and (min-width: 992px) {
+    @media screen and (max-width: 992px) {
 
     nav {
         #logo {
@@ -758,6 +778,14 @@ footer {
 
             .container {
 
+                .credits {
+                    a{
+
+                        font-size: 13px;
+                    }
+                }
+
+
 
                 p{
                     font-size: 10px;
@@ -791,11 +819,9 @@ footer {
     }
 
 
-    @media screen and (min-width: 1100px) {
+    @media screen and (max-width: 1024px) {
 
-        #logo {
-            display: none;
-        }
+
 
          nav {
 
