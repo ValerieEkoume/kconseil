@@ -550,7 +550,27 @@ footer {
 
            }
 
+
     .accueil {
+
+        .intro {
+
+            p{
+                text-align: center;
+                font-size: 25px;
+            }
+            .btn-intro {
+                bottom: 50%;
+            }
+
+            button {
+                position: absolute;
+                left: 39%;
+                padding: 10px 15px;
+                font-size: 20px;
+                font-weight: bolder;
+            }
+        }
 
         .container-1 {
             display: flex;
@@ -623,7 +643,6 @@ footer {
                 list-style: none;
                 text-align: center;
 
-
             }
 
             .media {
@@ -633,9 +652,6 @@ footer {
             }
         }
 
-
-
-
         .footer .content-footer {
             text-align: start;
         }
@@ -643,26 +659,15 @@ footer {
     }
 
 
-    @media screen and (max-width: 991px) {
+    @media screen and (min-width: 992px) {
+
+    nav {
+        #logo {
+            display: none;
+        }
+    }
 
 
-       /* nav {
-
-            .navbar-brand {
-
-                font-size: 20px;
-                margin-left: 0;
-            }
-
-            li {
-                margin: 0 10px;
-            }
-
-            a {
-                font-size: 18px;
-            }
-
-        }*/
 
         .accueil {
 
@@ -672,13 +677,6 @@ footer {
                 margin-top: 40px;
             }
 
-            button {
-                display: none;
-            }
-        }
-
-        blockquote .img-end {
-            display: none;
 
         }
 
@@ -724,28 +722,6 @@ footer {
                     font-size: 35px;
 
                 }
-/*
-
-
-                    h2 {
-                        font-weight: bolder;
-                        font-size: 20px;
-                        color: $dark-blue;
-                    }
-
-                    p {
-                        font-size: 20px;
-                    }
-
-
-                    li {
-                        font-size: 15px;
-                        list-style: none;
-                        text-align: center;
-                        padding: 7px;
-
-                    }
-                */
 
                 .media {
                     ul {
@@ -812,13 +788,31 @@ footer {
     }
 
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1024px) {
+
         #logo {
-            width: 60px;
-            position: absolute;
-            left: 50%;
-            top: 1%;
+            display: none;
         }
+
+         nav {
+
+
+            .navbar-brand {
+
+                font-size: 20px;
+                margin-left: 0;
+            }
+
+            li {
+                margin: 0 10px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+        }
+
 
     }
 
