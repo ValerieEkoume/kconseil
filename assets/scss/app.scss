@@ -583,6 +583,11 @@ footer {
         blockquote .img-end {
             display: none;
 
+            p{
+                font-size: 12px;
+              text-align: justify;
+            }
+
         }
 
 
@@ -590,7 +595,7 @@ footer {
 
     .about {
 
-        margin-right: 20px;
+        margin-left: 10px;
         p {
 
             margin-left: 10%;
@@ -619,31 +624,54 @@ footer {
 
             }
 
-            article {
+        article {
 
-                margin-top: 50px;
+            margin-top: 20%;
 
-                h2 {
-                    font-weight: bolder;
-                    font-size: 20px;
+            padding: 10px 0;
+
+            h2 {
+                font-weight: bolder;
+                font-size: 20px;
+                color: $dark-blue;
+            }
+
+            p {
+                font-size: 17px;
+            }
+
+            li {
+                font-size: 15px;
+                list-style: none;
+                text-align: center;
+
+
+            }
+
+            .media {
+
+                margin-left: 14%;
+
+                li {
+                    font-size: 18px;
+
+
+                }
+
+                i {
+                    font-size: 25px;
                     color: $dark-blue;
                 }
 
-                p {
-                    font-size: 20px;
-                }
-
-
-                li {
-                    font-size: 15px;
-                    list-style: none;
-                    text-align: center;
-                    padding: 7px;
-
-                }
             }
+        }
 
 
+
+
+        .footer .content-footer {
+            text-align: start;
+        }
 
     }
 
@@ -777,6 +805,43 @@ footer {
                 }
 
 
+            }
+        }
+
+        footer {
+
+            font-size: 9px;
+
+            .container {
+
+
+                p{
+                    font-size: 10px;
+                }
+
+                small {
+                    font-size: 10px;
+
+                }
+
+                .media {
+
+                    ul {
+                        margin: 0 0 0 40px ;
+                        padding: 0 !important;
+                    }
+
+
+                    i {
+                        font-size: 20px;
+                        color: $dark-blue;
+                    }
+                }
+            }
+
+
+            h6{
+                font-size: 12px;
             }
         }
     }
