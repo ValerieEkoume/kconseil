@@ -657,11 +657,20 @@ footer {
 
             .container {
                 .credits {
-                    li a{
+                    ul {
+                        margin-bottom: 1rem;
+                    }
+                    li {
+
+                        a {
+                        }
 
                         font-size: 13px;
                     }
+
                 }
+
+
 
                 .text-muted {
                     font-size: 10px;
