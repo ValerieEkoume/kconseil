@@ -13,7 +13,7 @@ body {
     font-family: 'Abel', sans-serif;
     position: relative;
     padding-bottom: 58px;
-    /*min-height: 100vh;*/
+    min-height: 100vh;
 
 }
 
@@ -648,9 +648,16 @@ footer {
             }
         }
 
-        .footer .content-footer {
-            text-align: start;
+        footer{
+            .text-muted {
+                font-size: 10px;
+            }
+            .footer .content-footer {
+                text-align: start;
+            }
         }
+
+
 
     }
 
