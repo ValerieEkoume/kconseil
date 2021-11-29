@@ -29,29 +29,7 @@ class SecurityController extends AbstractController
         $this->userRepository = $userRepository;
     }
 
-    /**
-     * @Route("/inscription", name="app_register")
-     * @param Request $request
-     * @return Response
-     */
-    public function register(Request $request): Response
-    {
-        $user = new User();
-        $form = $this->createForm(RegistrationType::class, $user);
-        $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
-            $user->setPassword(
-                $this->passwordEncoder->encodePassword($user, $form->get("password")->getData())
-            );
-        }
-
-        return $this->render('security/register.html.twig', [
-            'registrationForm' => $form->createView()
-
-        ]);
-
-    }
 
 
     /**

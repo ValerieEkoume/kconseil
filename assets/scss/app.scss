@@ -353,10 +353,6 @@ blockquote {
 
 }
 
-
-    .jumbotron {
-        height: 40vh;
-    }
 }
 
 
@@ -621,9 +617,14 @@ footer {
     }
     .contact {
 
+        margin-top: 10%;
+        left: 0;
+
+
         article {
 
-            margin-top: 10%;
+            margin-top: 20%;
+            left: 0;
             padding: 10px 10px;
 
             h2 {
@@ -664,9 +665,12 @@ footer {
                         font-size: 13px;
                     }
                 }
-                .text-muted {
-                    font-size: 10px;
+                .footer-p {
+                    small {
+                        display: none;
+                    }
                 }
+
                 .footer .content-footer {
                     text-align: start;
                 }
