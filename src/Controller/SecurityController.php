@@ -30,8 +30,6 @@ class SecurityController extends AbstractController
     }
 
 
-
-
     /**
      * @Route("/kimtim", name="app_login")
      */
