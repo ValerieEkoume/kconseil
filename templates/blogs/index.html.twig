@@ -4,12 +4,15 @@
 
 {% block body %}
 <section class="sec-blog">
-    <div class="jumbotron ">
-        <div class="intro">
-            <h1 class="exp-title-blog">LE BLOG</h1>
 
+    <div class="contact-jumbotron">
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1 class="contact-title">LE BLOG</h1>
+            </div>
         </div>
     </div>
+
 
     {% if blogs| length > 0 %}
         <h1 class="my-5 text-center text-muted ">{{  pluralize(blogs| length, 'Article') }}</h1>

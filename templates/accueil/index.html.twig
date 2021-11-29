@@ -7,14 +7,16 @@
     <section class="accueil">
         <div class="">
 
-            <div class="intro pb-3">
+            <div class="intro text-center mt-5">
+                <h1>Simplifiées vos démarches administratives </h1>
 
-                <p class="mt-5 px-4 fw-bolder">
-                    Kat Conseil Vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
+                <p class="mt-3 px-4 fw-bolder">
+                    KAT Conseil vous propose une expertise en Droit de l’Urbanisme, Accessibilité handicapés ainsi qu’un
                     accompagnement dans vos Démarches Administratives.
                 </p>
-                <div class="btn-intro">
-                    <a href="{{ path('app_contact') }}"><button type="button" class="btn btn-login">Contactez-Nous</button></a>
+
+                <div class="btn-intro text-center">
+                    <a href="{{ path('app_contact') }}"><button type="button" class="btn btn-outline-secondary">Contactez-nous</button></a>
                 </div>
 
             </div>
@@ -22,20 +24,20 @@
 
             <div class="container-1 ">
             <div class="card rounded shadow py-1" style="width: 30rem">
-                <img class="picmex" src="{{ asset('/build/images/images/katcon3.jpg') }}" alt="">
+                <img class="picmex rounded " src="{{ asset('/build/images/images/katcon3.jpg') }}" alt="">
                 <div class="card-body">
                     <h4 class=""><a href="{{ path('app_tarifs') }}">MON EXPERTISE</a></h4>
-                    <p class="h5">Kat Conseil Vous propose Une réponse individualisée au juste prix. <br><a href="{{ path('app_tarifs') }}">Consulter </a></p>
+                    <p class="h5">KAT Conseil vous propose une réponse individualisée au juste prix. <br><a href="{{ path('app_tarifs') }}">Consulter </a></p>
 
                 </div>
             </div>
 
 
                 <div class="card rounded shadow py-1 " style="width: 30rem">
-                    <img class="picblog" src="{{ asset('/build/images/images/katcon1.jpg') }}" alt="">
+                    <img class="picblog rounded" src="{{ asset('/build/images/images/katcon1.jpg') }}" alt="">
                     <div class="card-body">
                         <h4 class=""><a href="{{ path('app_blogs') }}">RESSOURCES</a></h4>
-                        <p class="h5"> Dans cette rubrique, retrouver nos conseils et recommendations en matière de....
+                        <p class="h5"> Dans cette rubrique, retrouver nos conseils et l'actualité du moment.
                             <br>
                             <a href="{{ path('app_blogs') }}">Consulter</a></p>
                     </div>
@@ -58,23 +60,29 @@
 
     <section class="about my-5">
 
-        <div class="container">
-
-            <div class="img-about">
-                <img src="{{ asset('/build/images/images/pic-about.jpg') }}" alt="">
-            </div>
+        <div class="about-box">
 
             <div class="p-about">
                 <h2 class="about-title">À PROPOS</h2>
+
+            </div>
+
+            <div class="clearfix">
+                <img src="{{ asset('/build/images/images/pic-about.jpg') }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="">
                 <p>
                     <span>Gummies candy bear claw wafer biscuit chupa chups</span>. Fruitcake chupa chups sweet chupa chups gummies
                     macaroon. Apple pie jelly gummies apple pie caramels. Tootsie roll fruitcake chocolate bar pastry 
                     fruitcake caramels.Gummies jujubes pudding lollipop sugar plum danish. Jelly-o sesame snaps bonbon 
-                    toffee pastry macaroon brownie donut candy canes. Chupa chups jelly beans cupcake cookie carrot cake 
-                    soufflé. Cake marzipan dessert sweet sweet roll candy canes. Tart carrot cake sesame snaps wafer oat 
+                    toffee pastry macaroon brownie donut candy canes. Chupa chups jelly beans cupcake cookie carrot cake
+                </p>
+                <p>
+                    soufflé. Cake marzipan dessert sweet sweet roll candy canes. Tart carrot cake sesame snaps wafer oat
                     cake danish sugar plum. Toffee donut cheesecake halvah wafer sweet sweet roll gingerbread.
                     Bonbon macaroon chupa chups chocolate bar macaroon.
                     acaroon. Apple pie jelly gummies apple pie caramels. Tootsie roll fruitcake chocolate bar pastry
+                </p>
+
+                <p>
                     fruitcake caramels.Gummies jujubes pudding lollipop sugar plum danish. Jelly-o sesame snaps bonbon
                     toffee pastry macaroon brownie donut candy canes. Chupa chups jelly beans cupcake cookie carrot cake
                     soufflé. Cake marzipan dessert sweet sweet roll candy canes. Tart carrot cake sesame snaps wafer oat
