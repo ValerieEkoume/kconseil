@@ -38,7 +38,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin", name="app_admin")
-     * @IsGranted("ROLE_USER")
+     *
      */
     public function index(): Response
     {
@@ -48,7 +48,7 @@ class AdminController extends AbstractController
     }
     /**
      * @Route("/admin-blog", name="app_admin_blog")
-     * @IsGranted("ROLE_USER")
+     *
      */
     public function blog(): Response
     {
@@ -58,7 +58,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/blogs/create", name="app_blogs_create")
-     * @IsGranted("ROLE_USER")
+     *
      */
     public function create(Request $request)
     {
@@ -80,7 +80,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/blogs/{id<[0-9]+>}/edit", name="app_blogs_edit", methods= {"GET", "POST"})
-     * @IsGranted("ROLE_USER")
+     *
      * @param Blog $blog
      * @return \Symfony\component\HttpFoundation\Response
      */
