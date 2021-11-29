@@ -613,18 +613,20 @@ footer {
             padding: 0;
         }
 
+        .clearfix img{
+            margin-left: 30px;
+        }
+
 
     }
     .contact {
 
-        margin-top: 10%;
-        left: 0;
+
 
 
         article {
 
-            margin-top: 20%;
-            left: 0;
+
             padding: 10px 10px;
 
             h2 {
@@ -811,9 +813,7 @@ footer {
     .contact {
 
         .contact-box {
-            position: absolute;
-            left: 20%;
-            top: 30%;
+
 
 
             article {
