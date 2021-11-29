@@ -43,7 +43,7 @@ class AdminController extends AbstractController
     public function index(): Response
     {
         $blogs = $this->repository->findAll();
-        $this->denyAccessUnlessGranted('ROLE_USER');
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         return $this->render('admin/index.html.twig', compact('blogs'));
     }
     /**
