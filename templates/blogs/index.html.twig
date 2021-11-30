@@ -21,8 +21,8 @@
             <div class="row mb-5 ">
                 {% for blog in row %}
                     <div class="col-md-4">
-                        <article class="blog bg-white rounded shadow ">
-                            <div class="mw-75 ms-5 rounded-top overflow-hidden">
+                        <article class="blog bg-white rounded shadow mb-3">
+                            <div class="mw-75  rounded-top overflow-hidden">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
                                     <img class="blog-pic " src="{{ asset('/build/images/images/logo-placeholder.jpg') }}" alt="">
                                 </a>
@@ -34,12 +34,12 @@
                                 </a>
                             </div> #}
                             <div class="ms-2">
-                            <p class="h5 pl-3 pt-3">
+                            <p class="h5 text-center pl-3 pt-3">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}"
                                                          class="text-secondary text-decoration-none">{{ blog.title }}
                                 </a>
                             </p>
-                            <p class="pl-3 pb-3 text-muted "><small>par  {{ blog.prenom}} {{ blog.nom }}</small></p>
+                            <p class=" text-center pl-3 pb-3 text-muted "><small>par  {{ blog.prenom}} {{ blog.nom }}</small></p>
                             </div>
                         </article>
                     </div>
