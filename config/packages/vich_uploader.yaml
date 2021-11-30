@@ -1,6 +1,7 @@
 vich_uploader:
     db_driver: orm
 
+
     mappings:
         blog_image:
             uri_prefix: /uploads/blogs

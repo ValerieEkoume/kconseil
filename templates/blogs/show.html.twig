@@ -11,7 +11,7 @@
                  <article class="blog  rounded ">
                      <div class="mw-100 rounded-top overflow-hidden">
                          <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
-                             <img src="{{(blog.imageName ? vich_uploader_asset(blog) : asset('images/placeholder.jpg')) |
+                             <img src="{{(blog.imageName ? vich_uploader_asset(blog) : asset('/build/images/images/placeholder.jpg')) |
                              imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100 ">
                          </a>
                      </div>
