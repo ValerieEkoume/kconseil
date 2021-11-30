@@ -374,6 +374,19 @@ blockquote {
     }
 }
 
+.sec-blog {
+    article{
+
+        border: 1px solid $light-blue;
+        overflow: hidden;
+
+        .blog-pic {
+            width: 80%;
+        }
+    }
+
+}
+
 
 .admin-tarifs {
 

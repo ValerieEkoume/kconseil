@@ -15,25 +15,30 @@
 
 
     {% if blogs| length > 0 %}
-        <h1 class="my-5 text-center text-muted ">{{  pluralize(blogs| length, 'Article') }}</h1>
+        <h1 class="my-5 text-center ">{{  pluralize(blogs| length, 'Article') }}</h1>
 
         {% for row in blogs|batch(3) %}
             <div class="row mb-5 ">
                 {% for blog in row %}
                     <div class="col-md-4">
-                        <article class="blog bg-white rounded shadow">
-                            <div class="mw-100  rounded-top overflow-hidden">
+                        <article class="blog bg-white rounded shadow ">
+                            <div class="mw-75 ms-5 rounded-top overflow-hidden">
+                                <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
+                                    <img class="blog-pic " src="{{ asset('/build/images/images/logo-placeholder.jpg') }}" alt="">
+                                </a>
+                            </div>
+                            {# <div class="mw-100  rounded-top overflow-hidden">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
                                     <img src="{{(blog.imageName ? vich_uploader_asset(blog) : asset('images/placeholder.jpg')) |
                                     imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100">
                                 </a>
-                            </div>
+                            </div> #}
                             <div class="ms-2">
-                            <h2 class="h5 pl-3 pt-3">
+                            <p class="h5 pl-3 pt-3">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}"
                                                          class="text-secondary text-decoration-none">{{ blog.title }}
                                 </a>
-                            </h2>
+                            </p>
                             <p class="pl-3 pb-3 text-muted "><small>par  {{ blog.prenom}} {{ blog.nom }}</small></p>
                             </div>
                         </article>
