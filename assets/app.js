@@ -14,15 +14,31 @@ import 'bootstrap'
 import './bootstrap';
 import 'leaflet';
 
+const storageType = localStorage;
+const consentPropertyName = 'katcons_consent'
 
-var mymap = L.map('map').setView([51.505, -0.09], 13);
+const shouldShowPopup = () => storageType.getItem(consentPropertyName);
+const saveToStorage = () => storageType.getItem(consentPropertyName, true);
 
-L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+window.onload = () => {
+    if (shouldShowPopup()) {
+        const consent = confirm('Ce site web utilise des cookies');
+            if (consent) {
+                saveToStorage();
+            }
+    }
+};
+
+
+//var mymap = L.map('map').setView([51.505, -0.09], 13);
+
+//L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
     // Il est toujours bien de laisser le lien vers la source des données
-    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-    minZoom: 1,
-    maxZoom: 20
-}).addTo(mymap);
+   // attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+    //maxZoom: 18,
+    //tileSize: 512,
+    //zoomOffset: -1
+//}).addTo(mymap);
 
 // Création du Marqueur
 
