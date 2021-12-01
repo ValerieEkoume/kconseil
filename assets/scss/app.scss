@@ -41,6 +41,45 @@ body {
 
 }
 
+
+
+.cookie-container {
+    position: fixed;
+    bottom: -100;
+    left: 0;
+    right: 0;
+    background-color: $dark-blue;
+    color: #f5f6fa;
+    padding: 0 28px;
+    box-shadow: 0 -2px 16px rgba(31, 43, 107, 0.65);
+    transition: 400ms;
+}
+
+.cookie-container.active{
+    bottom: 0;
+}
+
+.cookie-container   p{
+        margin: 15px 0;
+        line-height: 2;
+        font-size: 20px;
+    }
+
+.cookie-container   a {
+        color: #f5f6fa;
+        }
+.cookie-container .cookie-btn {
+        background-color: $primary-blue;
+        border: 0;
+        color: $dark-blue;
+        padding: 10px 25px;
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
 .vich-image  {
 
     .form-check{
@@ -131,6 +170,8 @@ form .login-form {
         text-align: center;
         font-size: 30px;
         font-weight: bolder;
+        cursor: pointer;
+
     }
 
     a {
