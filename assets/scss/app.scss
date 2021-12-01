@@ -45,7 +45,7 @@ body {
 
 .cookie-container {
     position: fixed;
-    bottom: -100;
+    bottom: -100%;
     left: 0;
     right: 0;
     background-color: $dark-blue;
@@ -274,7 +274,11 @@ blockquote {
 }
 
 .expertise {
-    height: 90vh;
+
+    .wrapper{
+
+    }
+
 
 
     .jumbotron {

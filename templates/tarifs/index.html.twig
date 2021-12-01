@@ -6,14 +6,11 @@
 <section class="expertise mt-5">
     <div class="jumbotron ">
         <div class="intro">
-
-
         </div>
-
     </div>
 
 
-
+    <div class="wrapper">
     {% if tarifss| length > 0 %}
         <h1 class="mb-3 text-center text-muted mt-5">{{  pluralize(tarifss| length, 'Prestation') }}</h1>
 
@@ -47,5 +44,6 @@
     {% else %}
         {# <p class="h1 mt-5 Text-center-justify">Pas encore de tarifs. <a href="{{ path('app_tarifs_new') }}">Créez un tarif</a></p> #}
     {% endif %}
+    </div>
 </section>
 {% endblock %}
