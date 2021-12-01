@@ -7,7 +7,7 @@
 
 // any CSS you import will output into a single css file (app.scss in this case)
 import './scss/app.scss';
-
+import './map';
 // start the Stimulus application
 import 'jquery';
 import 'bootstrap'
@@ -30,15 +30,8 @@ window.onload = () => {
 };
 
 
-//var mymap = L.map('map').setView([51.505, -0.09], 13);
 
-//L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    // Il est toujours bien de laisser le lien vers la source des données
-   // attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-    //maxZoom: 18,
-    //tileSize: 512,
-    //zoomOffset: -1
-//}).addTo(mymap);
+
 
 // Création du Marqueur
 

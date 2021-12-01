@@ -2,6 +2,7 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import 'shared/variables';
 @import "~bootstrap";
+@import "~leaflet";
 
 *{
     margin: 0;
@@ -304,12 +305,10 @@ blockquote {
 
 .contact{
 
-
-
     .blog {
         padding: 10px;
         border: 1px solid $light-blue;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
 
 
         .coordonnees {
@@ -358,8 +357,8 @@ blockquote {
 
 
 #map {
-
-    height: 180px;
+    height: 400px;
+    margin: 0 15% 10% 17%;
 
 }
 
