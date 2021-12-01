@@ -26,4 +26,4 @@ import 'leaflet';
 //}).addTo(mymap);
 
 // Mise en place de la popup sur le marqueur
-circle.bindPopup("<p>KAT Conseil <br> 2 rue André Maginet <br>70000 VESOUL</p>");
+//circle.bindPopup("<p>KAT Conseil <br> 2 rue André Maginet <br>70000 VESOUL</p>");
