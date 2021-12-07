@@ -444,6 +444,7 @@ height: 90vh;
 }
 
 .sec-blog {
+    height: 100vh;
     article{
 
         border: 1px solid $light-blue;
@@ -487,6 +488,11 @@ height: 90vh;
         text-align: center;
         text-transform: uppercase;
         padding: 20px;
+        font-weight: bolder;
+
+        a{
+            color: $dark-blue;
+        }
 
     }
 }
