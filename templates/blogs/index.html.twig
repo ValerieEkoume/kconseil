@@ -23,16 +23,16 @@
                     <div class="col-md-4">
                         <article class="blog bg-white rounded shadow mb-3">
                             <div class="mw-75  rounded-top overflow-hidden">
-                                {# <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
+                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
                                     <img class="blog-pic " src="{{ asset('/build/images/images/logo-placeholder.jpg') }}" alt="Article de blog droit de l'urbanisation">
-                                </a> #}
+                                </a>
                             </div>
-                             <div class="mw-100  rounded-top overflow-hidden">
+                             {# <div class="mw-100  rounded-top overflow-hidden">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}">
                                     <img src="{{(blog.imageName ? vich_uploader_asset(blog) : asset('images/placeholder.jpg')) |
                                     imagine_filter  ('squared_thumbnail_medium') }}" alt="{{ blog.title }}" class="w-100">
                                 </a>
-                            </div>
+                            </div> #}
                             <div class="ms-2">
                             <p class="h5 text-center pl-3 pt-3">
                                 <a href="{{ path('app_blogs_show', {id: blog.id}) }}"
